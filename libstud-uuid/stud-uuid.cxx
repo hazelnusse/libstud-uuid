@@ -3,15 +3,13 @@
 #include <ostream>
 #include <stdexcept>
 
-using namespace std;
-
 namespace stud_uuid
 {
-  void say_hello (ostream& o, const string& n)
+  void say_hello(std::ostream& o, const std::string& n)
   {
-    if (n.empty ())
-      throw invalid_argument ("empty name");
+    if (n.empty())
+      throw std::invalid_argument ("empty name");
 
-    o << "Hello, " << n << '!' << endl;
+    o << "Hello, " << n << "!\n";
   }
 }
